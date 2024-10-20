@@ -1,5 +1,5 @@
 
-# OCR Analytics Documentation
+# OCR Analytics Project Documentation
 
 This documentation covers the entire OCR Analytics project, from setting up the frontend to using Azure AI for Optical Character Recognition (OCR) and displaying the results. 
 
@@ -7,50 +7,56 @@ This documentation covers the entire OCR Analytics project, from setting up the 
 
 This project demonstrates how to integrate Azure's Computer Vision API into a React application for extracting text from uploaded images using Optical Character Recognition (OCR). The extracted text is then displayed in a structured format on the frontend.
 
-### Key Features:
-
-1. **Image Upload**: Users can upload an image (e.g., a photo ID).
-2. **Image Preview**: The uploaded image is shown in the interface.
-3. **OCR Analysis**: The image is sent to Azure AI's Computer Vision API for text extraction.
-4. **Text Output**: The extracted text is displayed in a text box after analysis.
-
 ---
 
-## 1. Frontend Design
+## 1. Project Setup Instructions
 
-The frontend layout follows a three-step process:
+### Step 1: Install Node.js and Create a React App
 
-1. **Step 1**: Upload an image.
-2. **Step 2**: Perform OCR analysis.
-3. **Step 3**: Display the extracted text.
+1. Install [Node.js](https://nodejs.org/en/) if you don't have it already.
+2. Run the following commands to create a new React app and navigate into the project directory:
+   - `npx create-react-app ocr-analytics`
+   - `cd ocr-analytics`
 
-The layout mimics the provided design and is styled using CSS.
+### Step 2: Install Required Dependencies
 
-### Uploaded Image:
-![Result](ocr_result_image.png)
+Install the following libraries:
+- **Axios**: For making API requests.
+   - Command: `npm install axios`
 
----
-
-## 2. Backend Integration with Azure AI
-
-The project leverages Azure's Computer Vision API to perform OCR. Follow these steps to set up and use Azure AI:
-
-### Set Up Azure Computer Vision Resource
+### Step 3: Set Up Azure Computer Vision API
 
 1. Log in to the [Azure Portal](https://portal.azure.com/).
 2. Click **Create a resource** and search for **Computer Vision**.
 3. Set up a new Computer Vision resource.
-4. After the resource is created, go to **Keys and Endpoint** and copy the key and endpoint for use in the React app.
+4. After the resource is created, go to **Keys and Endpoint** to retrieve your **API key** and **Endpoint**.
+5. Replace the placeholders in the app with your actual Azure **Endpoint** and **API key**.
 
-### API Request to Azure Computer Vision
+---
 
-In the app, the image file is sent to the Computer Vision API, which processes the image and returns the extracted text.
+## 2. Running the Project
+
+### Step 1: Start the React Development Server
+
+1. After setting up the project, you can run the app using the following command:
+   - `npm start`
+   
+   This will launch the app in your default web browser. If it doesn't open automatically, visit `http://localhost:3000/` in your browser.
+
+### Step 2: Use the Application
+
+1. Upload an image for OCR analysis (such as an ID card).
+2. Click on the "OCR Analyze" button to send the image to the Azure API.
+3. The extracted text will appear in the output box.
 
 ---
 
 ## 3. Extracted Text from OCR
 
 Below is the result of the OCR process after analyzing the uploaded image:
+
+### Uploaded Image:
+![Result](ocr_result_image.PNG)
 
 ### Extracted Text:
 
